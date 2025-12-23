@@ -1,9 +1,10 @@
 import React from 'react'
+import Form from './components/Form'
 
 const App = () => {
   return (
-    <div className=''>
-      <h1 className=''>App</h1>
+    <div className='bg-gray-800 h-screen flex items-center justify-center text-white'>
+      <Form/>
     </div>
   )
 }
