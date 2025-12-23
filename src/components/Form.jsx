@@ -1,22 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Form = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
+  // console.log("Name", name)
+  // console.log("Email", email)
+  // console.log("Message", message)
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    alert(`Form Submitted by ${name}`);
+    setName("")
+    setEmail("")
+    setMessage("")
+  }
   return (
-    <form action="" className='max-w-md mx-auto space-y-3 bg-white text-black p-8 rounded'>
+    <form action="" onSubmit={handleSubmit} className='max-w-md mx-auto space-y-3 bg-white text-black p-8 rounded'>
       {/* name */}
       <div>
         <label className='block mb-1 font-semibold'>Name: </label>
-        <input type="text" id='name' name='name' placeholder='Input Your Name' className='border rounded p-2' />
+        <input type="text" value={name} onChange={(e)=> setName(e.target.value)} id='name' name='name' placeholder='Input Your Name' className='border rounded p-2' />
       </div>
       {/* email */}
       <div>
         <label className='block mb-1 font-semibold'>Email: </label>
-        <input type="email" required id='email' name='email' placeholder='Input Your Email' className='border rounded p-2' />
+        <input type="email" id='email' name='email' value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='Input Your Email' className='border rounded p-2' />
       </div>
       {/* message */}
       <div>
         <label className='block mb-1 font-semibold'>Message: </label>
-        <textarea type="message" required id='message' name='message' rows="4" cols="23" placeholder='Input Your Message' className='border rounded p-2' />
+        <textarea type="message" id='message' name='message' rows="4" cols="23"  value={message} onChange={(e)=> setMessage(e.target.value)}placeholder='Input Your Message' className='border rounded p-2' />
       </div>
 
       {/* button */}
