@@ -1,0 +1,28 @@
+import React from 'react'
+
+const Form = () => {
+  return (
+    <form action="" className='max-w-md mx-auto space-y-3 bg-white text-black p-8 rounded'>
+      {/* name */}
+      <div>
+        <label className='block mb-1 font-semibold'>Name: </label>
+        <input type="text" id='name' name='name' placeholder='Input Your Name' className='border rounded p-2' />
+      </div>
+      {/* email */}
+      <div>
+        <label className='block mb-1 font-semibold'>Email: </label>
+        <input type="email" required id='email' name='email' placeholder='Input Your Email' className='border rounded p-2' />
+      </div>
+      {/* message */}
+      <div>
+        <label className='block mb-1 font-semibold'>Message: </label>
+        <textarea type="message" required id='message' name='message' rows="4" cols="23" placeholder='Input Your Message' className='border rounded p-2' />
+      </div>
+
+      {/* button */}
+      <button type='submit' className='p-2 bg-blue-600 rounded text-white'>Submit</button>
+    </form>
+  )
+}
+
+export default Form
