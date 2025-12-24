@@ -23,9 +23,9 @@ const Form = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!name.trim())newErrors.name = "Name is required!"
-    if (!email.trim())newErrors.email = "Email is required!"
-    if (!message.trim())newErrors.message = "Message is required!"
+    if (!name.trim())newErrors.name = "Name is required. Give Correct Name!"
+    if (!email.trim())newErrors.email = "Invalid Email. Provide valid Email!"
+    if (!message.trim())newErrors.message = "Message Cannot be Empty!"
       setErrors(newErrors)
       return Object.keys(newErrors).length === 0
     
