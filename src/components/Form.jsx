@@ -23,18 +23,19 @@ const Form = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!name) {
-      newErrors.name = "Name is required!"
+    if (!name.trim())newErrors.name = "Name is required!"
+    if (!email.trim())newErrors.email = "Email is required!"
+    if (!message.trim())newErrors.message = "Message is required!"
       setErrors(newErrors)
       return Object.keys(newErrors).length === 0
-    }
+    
   }
   return (
     <form action="" onSubmit={handleSubmit} className='max-w-md mx-auto space-y-3 bg-white text-black p-8 rounded'>
       {/* name */}
       <div>
         <label className='block mb-1 font-semibold'>Name: </label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} id='name' name='name' placeholder='Input Your Name' className='border rounded p-2' />
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} id='name' name='name' placeholder='Input Your Name' className='border rounded p-2 mt-2' />
         {
           errors.name && <p className='text-red-500 text-sm italic'>{errors.name}</p>
         }
