@@ -37,7 +37,7 @@ const Form = () => {
         <label className='block mb-1 font-semibold'>Name: </label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} id='name' name='name' placeholder='Input Your Name' className='border rounded p-2 mt-2' />
         {
-          errors.name && <p className='text-red-500 text-sm italic'>{errors.name}</p>
+          errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>
         }
       </div>
       {/* email */}
@@ -45,7 +45,7 @@ const Form = () => {
         <label className='block mb-1 font-semibold'>Email: </label>
         <input type="email" id='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Input Your Email' className='border rounded p-2' />
         {
-          errors.email && <p className='text-red-500 text-sm italic'>{errors.email}</p>
+          errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>
         }
       </div>
       {/* message */}
@@ -53,7 +53,7 @@ const Form = () => {
         <label className='block mb-1 font-semibold'>Message: </label>
         <textarea type="message" id='message' name='message' rows="4" cols="23" value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Input Your Message' className='border rounded p-2' />
         {
-          errors.message && <p className='text-red-500 text-sm italic'>{errors.message}</p>
+          errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>
         }
       </div>
 
