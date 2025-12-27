@@ -25,7 +25,7 @@ const Form = () => {
     const newErrors = {};
     if (!name.trim())newErrors.name = "Name is required. Give Correct Name!"
     if (!email.trim())newErrors.email = "Invalid Email. Provide valid Email!"
-    if (!message.trim())newErrors.message = "Message Cannot be Empty!"
+    if (!message.trim())newErrors.message = "Message Can't Empty!"
       setErrors(newErrors)
       return Object.keys(newErrors).length === 0
     
