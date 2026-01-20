@@ -37,7 +37,7 @@ const Form = () => {
         <label className='block mb-1 font-semibold'>Name: </label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} id='name' name='name' placeholder='Input Your Name' className='border rounded p-2 mt-2' />
         {
-          errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>
+          errors.name && <p className='text-red-600 text-sm'>{errors.name}</p>
         }
       </div>
       {/* email */}
@@ -58,7 +58,7 @@ const Form = () => {
       </div>
 
       {/* button */}
-      <button type='submit' className='p-2 bg-blue-600 rounded text-white'>Submit</button>
+      <button type='submit' className='p-2 bg-blue-700 rounded text-white'>Submit</button>
     </form>
   )
 }
